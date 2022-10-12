@@ -1,0 +1,32 @@
+import 'dart:async';
+import 'package:get/get.dart';
+import 'package:grocery_food_delivery/controllers/03_main_controller/main_controller.dart';
+import 'package:grocery_food_delivery/controllers/04_home_controller/home_controller.dart';
+import 'package:grocery_food_delivery/core/constants/app_routes.dart';
+
+abstract class SplashControllerInit extends GetxController {
+  goToNext();
+}
+
+class SplashController extends SplashControllerInit {
+  late Timer timer;
+
+  @override
+  void onInit() {
+    timer = Timer(const Duration(seconds: 5), () => goToNext());
+    super.onInit();
+  }
+
+  @override
+  void onClose() {
+    timer.cancel();
+    super.onClose();
+  }
+
+  @override
+  goToNext() {
+    Get.put(MainController(), permanent: true);
+    Get.put(HomeController(), permanent: true);
+    Get.offNamed(AppRoutes.next);
+  }
+}
