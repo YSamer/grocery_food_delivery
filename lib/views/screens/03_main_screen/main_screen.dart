@@ -9,6 +9,7 @@ class MainScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Get.put(MainController());
     return GetBuilder<MainController>(
       builder: (controller) {
         return Scaffold(

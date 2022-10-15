@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:grocery_food_delivery/controllers/04_home_controller/home_controller.dart';
+import 'package:grocery_food_delivery/controllers/03_main_controller/main_controller.dart';
 import 'package:grocery_food_delivery/core/constants/app_colors.dart';
 import 'package:grocery_food_delivery/views/widgets/text_fields/search.dart';
 import 'package:grocery_food_delivery/views/widgets/texts/primary_text.dart';
 import 'package:grocery_food_delivery/views/widgets/texts/secondery_text.dart';
 
-class HomeAppBar extends GetView<HomeController> {
+class HomeAppBar extends GetView<MainController> {
   const HomeAppBar({
     Key? key,
   }) : super(key: key);

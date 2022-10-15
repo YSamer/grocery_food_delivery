@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:grocery_food_delivery/controllers/04_home_controller/home_controller.dart';
+import 'package:grocery_food_delivery/controllers/03_main_controller/main_controller.dart';
 import 'package:grocery_food_delivery/core/constants/app_colors.dart';
 
-class AdBanner extends GetView<HomeController> {
+class AdBanner extends GetView<MainController> {
   const AdBanner({
     Key? key,
   }) : super(key: key);
@@ -11,7 +11,7 @@ class AdBanner extends GetView<HomeController> {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
-    return GetBuilder<HomeController>(
+    return GetBuilder<MainController>(
       builder: (controller) {
         return Container(
           height: 175,

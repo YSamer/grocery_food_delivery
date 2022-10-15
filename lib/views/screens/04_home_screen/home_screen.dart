@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:grocery_food_delivery/controllers/04_home_controller/home_controller.dart';
 import 'package:grocery_food_delivery/core/constants/app_colors.dart';
 import 'package:grocery_food_delivery/views/screens/04_home_screen/widgets/home_body.dart';
 import 'package:grocery_food_delivery/views/screens/04_home_screen/widgets/home_app_bar.dart';
@@ -8,8 +10,8 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // Get.put(HomeController());
     Size size = MediaQuery.of(context).size;
-
     return GestureDetector(
       onTap: () {
         FocusScope.of(context).unfocus();
@@ -23,8 +25,8 @@ class HomeScreen extends StatelessWidget {
             child: Stack(
               fit: StackFit.expand,
               alignment: AlignmentDirectional.topStart,
-              children: [
-                const HomeAppBar(),
+              children: const [
+                HomeAppBar(),
                 HomeBody(),
               ],
             ),

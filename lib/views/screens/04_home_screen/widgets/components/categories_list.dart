@@ -1,18 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:grocery_food_delivery/controllers/04_home_controller/home_controller.dart';
+import 'package:grocery_food_delivery/controllers/03_main_controller/main_controller.dart';
 import 'package:grocery_food_delivery/core/constants/app_colors.dart';
 import 'package:grocery_food_delivery/views/widgets/texts/light_primary_text.dart';
 import 'package:grocery_food_delivery/views/widgets/texts/primary_text.dart';
 
-class CategoriesList extends GetView<HomeController> {
+class CategoriesList extends GetView<MainController> {
   const CategoriesList({
     Key? key,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return GetBuilder<HomeController>(
+    return GetBuilder<MainController>(
       builder: (controller) {
         return Column(
           crossAxisAlignment: CrossAxisAlignment.center,
