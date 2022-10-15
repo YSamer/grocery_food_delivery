@@ -11,7 +11,7 @@ class AppRoutes {
 
   static List<GetPage<dynamic>> routes = [
     GetPage(name: initial, page: () => const SplashScreen()),
-    GetPage(name: next, page: () => const MainScreen()),
+    GetPage(name: next, page: () => const OnboardingScreen()),
     GetPage(name: home, page: () => const HomeScreen()),
   ];
 }
